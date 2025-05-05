@@ -1,0 +1,15 @@
+function checkAnswer() {
+  const input = document.getElementById("answer");
+  const feedback = document.getElementById("feedback");
+  const userAnswer = parseInt(input.value);
+
+  const correctAnswer = 30; // Existem 16 pequenos, 9 médios, 4 grandes e 1 gigante
+
+  if (userAnswer === correctAnswer) {
+    feedback.textContent = "✅ Parabéns! Você acertou!";
+    feedback.style.color = "lightgreen";
+  } else {
+    feedback.textContent = `❌ Ops! Não é ${userAnswer}. Tente de novo!`;
+    feedback.style.color = "orange";
+  }
+}
